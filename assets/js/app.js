@@ -79,4 +79,48 @@ document.addEventListener("DOMContentLoaded", function() {
     }
 });
 
+const apiKey = '1bde3e50da3850749823e055b9ed3482'; // Replace with your OpenWeatherMap API key
+
+// Function to fetch weather data
+function fetchWeather() {
+    const weatherElement = document.getElementById('weather');
+
+    // Check if Geolocation API is supported
+    if (navigator.geolocation) {
+        navigator.geolocation.getCurrentPosition(
+            position => {
+                const lat = position.coords.latitude;
+                const lon = position.coords.longitude;
+
+                // Fetch weather data from OpenWeatherMap
+                fetch(`https://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${lon}&units=metric&appid=${apiKey}`)
+                    .then(response => response.json())
+                    .then(data => {
+                        const temp = Math.round(data.main.temp);
+                        const description = data.weather[0].description;
+                        const icon = `https://openweathermap.org/img/wn/${data.weather[0].icon}@2x.png`;
+
+                        // Update the weather element with fetched data
+                        weatherElement.innerHTML = `
+                            <img src="${icon}" alt="Weather Icon" style="height: 30px; vertical-align: middle;"> 
+                            ${temp}°C, ${description.charAt(0).toUpperCase() + description.slice(1)}
+                        `;
+                    })
+                    .catch(error => {
+                        weatherElement.innerText = 'Weather unavailable';
+                        console.error('Error fetching weather:', error);
+                    });
+            },
+            () => {
+                weatherElement.innerText = 'Location permission denied';
+            }
+        );
+    } else {
+        weatherElement.innerText = 'Geolocation not supported';
+    }
+}
+
+// Call the function on page load
+window.onload = fetchWeather;
+
 
