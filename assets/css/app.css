@@ -1,0 +1,536 @@
+html, body {
+  font-family: 'Lato', sans-serif;
+}
+
+/* Prevent text selection */
+body {
+  -webkit-user-select: none; /* Chrome, Safari, and Opera */
+  -moz-user-select: none; /* Firefox */
+  -ms-user-select: none; /* Internet Explorer/Edge */
+  user-select: none; /* Non-prefixed version, currently supported by Chrome, Opera, and Edge */
+}
+
+h1 {
+  font-size:3em;
+  font-family: 'Roboto Condensed', sans-serif;
+  font-weight: 300;
+}
+
+.name {
+  font-size:4em;
+  font-family: 'Roboto Condensed', sans-serif;
+  font-weight: 300;
+}
+
+footer {
+  background-color: #343a40;
+  color: #fff;
+  display: flex;
+  align-items: flex-start;
+}
+
+footer a {
+  color: #fff;
+}
+
+.header-container {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+
+.wave {
+  background: linear-gradient(to left, #00c6ff, #328eff);
+  min-height: 350px;
+  color: #fff;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.wave-svg{
+  width: 100%;
+  transform: translateY(-80px);
+}
+
+.wave-svg-secondary{
+  width: 100%;
+}
+
+.wave-svg-color {
+  margin-top: 30px;
+}
+
+.custom-card {
+  transform: translateY(-150px);
+  text-align: center;
+  width:500px;
+  max-width: 90%;
+  margin: 0 auto;
+  
+}
+
+.card {
+  border-radius: 0;
+  box-shadow:0 8px 17px 2px rgba(152,152,152,0.14),0 3px 14px 2px rgba(152,152,152,0.12),0 5px 5px -3px rgba(152,152,152,0.2);
+}
+
+.pricing-container {
+  padding: 60px 0;
+}
+
+.pricing-item {
+  padding: 20px 0;
+}
+
+.container-color, .container-dark {
+  padding: 100px 0;
+  color: #fff;
+}
+
+.container-color {
+  background-color: #328eff;
+}
+
+.container-dark {
+  background-color: #343a40;
+}
+
+.card-title {
+  margin-top: 50px;
+  color: #328eff;
+  text-align: center;
+}
+
+.card-text {
+  line-height: 2;
+}
+
+.card-icon{
+  color: #328eff;
+  font-size: 50px;
+}
+
+.subtitle {
+    font-weight: 200;
+}
+.boy {
+    display: block;
+    height: 200px;
+    margin-top: 50px;
+}
+
+.start-project-card {
+    min-height: 200px;
+    width: 100%;
+}
+
+.card-flex{
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.social-icon {
+    color: #fff;
+    font-size: 36px;
+    margin-right: 40px;
+}
+
+.skill-container{
+    padding: 30px;
+}
+
+.fa-align {
+  margin: auto;
+  color: #fff;
+} 
+
+.image-container {
+  display: flex;
+  justify-content: center; /* Center horizontally */
+  align-items: center;    /* Center vertically if needed */
+  width: 100%;            /* Make the container full width */
+}
+
+img {
+  max-width: 100%;        /* Make the image responsive */
+  height: auto;           /* Maintain aspect ratio */
+}
+
+.table-responsive {
+  max-height: 1000px; /* Adjust based on your table height */
+  overflow-y: auto; /* Enables vertical scrolling */
+}
+
+.small-image {
+  width: 150px;            /* Set desired width */
+  height: auto;          /* Maintain aspect ratio */
+}
+
+/* Sticky header for the table */
+thead th {
+  position: sticky;
+  top: 0;
+  background-color: #f8f9fa; /* Background color to differentiate the header */
+  z-index: 10; /* Ensure the header stays on top */
+  box-shadow: 0 2px 2px -1px rgba(0, 0, 0, 0.4); /* Optional shadow for a more defined header */
+}
+
+/* Nav Bar */
+.navbar {
+  background-color: #f8f9fa; /* Light background for navbar */
+  border-bottom: 1px solid #ddd; /* Add a bottom border to separate */
+}
+
+.navbar-nav .nav-link {
+  font-weight: 600;
+  color: #007bff; /* Adjust text color to match your theme */
+}
+
+.navbar-nav .nav-link:hover {
+  color: #0056b3; /* Darken color on hover */
+}
+
+.navbar-brand {
+  font-weight: bold;
+  color: #007bff;
+}
+
+.sticky-top {
+  z-index: 1030; /* Ensures the navbar stays on top of other elements */
+  background-color: #f8f9fa; /* Ensure the background is visible while scrolling */
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1); /* Add a subtle shadow to the sticky navbar */
+}
+
+/* Nav bar Drop Down Menu*/
+.navbar-nav .dropdown-menu {
+  background-color: #f8f9fa; /* Background color of dropdown */
+  border-radius: 0.25rem;     /* Slightly rounded corners */
+}
+
+.dropdown-item:hover {
+  background-color: #328eff; /* Highlight color on hover */
+  color: white;
+}
+
+/* Enable Smooth Scrolling*/
+html {
+  scroll-behavior: smooth;
+}
+
+/*------------------------------------*/
+.features-section {
+  margin-top: 60px;
+  margin-bottom: 60px;
+}
+
+.feature-item {
+  margin-bottom: 30px;
+}
+
+.feature-icon {
+  color: #328eff; /* Matches your existing theme color */
+}
+
+.feature-item h4 {
+  font-size: 1.5em;
+  font-weight: 700;
+  margin-top: 15px;
+  color: #555; /* Adjust color to match other sections */
+}
+
+/*----------------------------------------------*/
+/* FEATURES SECTION*/
+.feature-icon img {
+  width: 100%;                /* Make the image fill the container */
+  max-width: 150px;           /* Set a maximum width */
+  height: 150px;              /* Set a fixed height */
+  object-fit: contain;        /* Ensures the image keeps its aspect ratio */
+  display: block;             /* Ensure the image is a block-level element */
+  margin: 0 auto;             /* Center the image */
+}
+
+/*FEATURES SECTION*/
+@media (max-width: 768px) {
+  .feature-icon img {
+      max-width: 100px;       /* Smaller logo size for mobile */
+      height: 100px;
+  }
+}
+
+
+
+#timeline .timeline-item:after, #timeline .timeline-item:before {
+	 content: '';
+	 display: block;
+	 width: 100%;
+	 clear: both;
+}
+ 
+ #timeline {
+	 width: 100%;
+	 margin: 100px auto;
+	 position: relative;
+	 padding: 0 10px;
+	 transition: all 0.4s ease;
+}
+ #timeline:before {
+	 content: "";
+	 width: 3px;
+	 height: 100%;
+	 background: #328eff;
+	 left: 50%;
+	 top: 0;
+	 position: absolute;
+}
+ #timeline:after {
+	 content: "";
+	 clear: both;
+	 display: table;
+	 width: 100%;
+}
+ #timeline .timeline-item {
+	 margin-bottom: 50px;
+	 position: relative;
+}
+ #timeline .timeline-item .timeline-icon {
+	 background: #328eff;
+	 width: 50px;
+	 height: 50px;
+	 position: absolute;
+	 top: 0;
+	 left: 50%;
+	 overflow: hidden;
+	 margin-left: -23px;
+	 border-radius: 50%;
+}
+ #timeline .timeline-item .timeline-icon {
+	 display:flex;
+}
+ #timeline .timeline-item .timeline-content {
+	 width: 45%;
+	 background: #fff;
+	 padding: 20px;
+	 border-radius: 0;
+	 transition: all 0.3s ease;
+}
+ #timeline .timeline-item .timeline-content h2 {
+	 padding: 15px;
+	 background: #328eff;
+	 color: #fff;
+	 margin: -20px -20px 0 -20px;
+	 font-weight: 300;
+	 -webkit-border-radius: 3px 3px 0 0;
+	 -moz-border-radius: 3px 3px 0 0;
+	 -ms-border-radius: 3px 3px 0 0;
+	 border-radius: 3px 3px 0 0;
+}
+ #timeline .timeline-item .timeline-content:before {
+	 content: '';
+	 position: absolute;
+	 left: 45%;
+	 top: 20px;
+	 width: 0;
+	 height: 0;
+	 border-top: 7px solid transparent;
+	 border-bottom: 7px solid transparent;
+	 border-left: 7px solid #328eff;
+}
+ #timeline .timeline-item .timeline-content.right {
+	 float: right;
+}
+ #timeline .timeline-item .timeline-content.right:before {
+	 content: '';
+	 right: 45%;
+	 left: inherit;
+	 border-left: 0;
+	 border-right: 7px solid #328eff;
+}
+ .btn {
+	 background-color: #328eff;
+   border: 2px solid #328eff;
+   color: #fff;
+   border-radius: 0;
+
+}
+
+/* Contact Form*/
+.container-dark {
+  background-color: #343a40;
+  color: #fff;
+  padding: 30px 0;
+}
+
+.container h1 {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.contact-form {
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.contact-form label {
+  display: block;
+  margin-bottom: 5px;
+  color: #fff;
+}
+
+.contact-form input[type="text"],
+.contact-form input[type="email"],
+.contact-form textarea {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+.contact-form button {
+  background-color: #328eff;
+  color: white;
+  border: none;
+  padding: 10px 15px;
+  border-radius: 4px;
+  cursor: pointer;
+  width: 100%;
+}
+
+.contact-form button:hover {
+  background-color: #286ebf;
+}
+
+
+ @media screen and (max-width: 768px) {
+	 #timeline {
+		 margin: 30px;
+		 padding: 0px;
+		 width: 90%;
+	}
+	 #timeline:before {
+		 left: 0;
+	}
+	 #timeline .timeline-item .timeline-content {
+		 width: 90%;
+		 float: right;
+	}
+	 #timeline .timeline-item .timeline-content:before, #timeline .timeline-item .timeline-content.right:before {
+		 left: 10%;
+		 margin-left: -6px;
+		 border-left: 0;
+		 border-right: 7px solid #328eff;
+	}
+	 #timeline .timeline-item .timeline-icon {
+		 left: 0;
+	}
+}
+ 
+
+
+.modal {
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  overflow: hidden;
+}
+
+.modal-dialog {
+  position: fixed;
+  margin: 0;
+  min-width: 100%;
+  height: 100%;
+  padding: 0;
+}
+
+.modal-content {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  border-radius: 0;
+  box-shadow: none;
+}
+
+.modal-header {
+  position: absolute;
+  top: 0;
+  right: 0;
+  left: 0;
+  height: 50px;
+  padding: 10px;
+  background: #328eff;
+  border: 0;
+  border-radius: 0;
+}
+
+.modal-title {
+  font-weight: 300;
+  font-size: 2em;
+  color: #fff;
+  line-height: 30px;
+}
+
+.modal-body {
+  position: absolute;
+  top: 50px;
+  bottom: 60px;
+  width: 100%;
+  font-weight: 300;
+  overflow: auto;
+}
+
+.modal-footer {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  height: 60px;
+  padding: 10px;
+  background: #f1f3f5;
+}
+
+/* table */
+@media (max-width: 768px) {
+  .table-responsive {
+    display: block;
+    width: 100%;
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+  }
+
+  table {
+    width: 100%;
+  }
+
+  th, td {
+    white-space: nowrap;
+  }
+}
+
+/* Flexbox to stack the search bar and table */
+@media (max-width: 768px) {
+  .filter-container {
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+  }
+}
+
+
+@media (max-width: 576px) {
+  /* Hide less important columns on small screens */
+  th:nth-child(9), td:nth-child(9),
+  th:nth-child(9), td:nth-child(9),
+  th:nth-child(9), td:nth-child(9),
+  th:nth-child(9), td:nth-child(9),
+  th:nth-child(9), td:nth-child(9) {
+    display: none;
+  }
+}
