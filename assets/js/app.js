@@ -122,5 +122,3 @@ function fetchWeather() {
 
 // Call the function on page load
 window.onload = fetchWeather;
-
-
