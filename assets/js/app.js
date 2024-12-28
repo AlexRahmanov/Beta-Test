@@ -7,7 +7,7 @@ function showImgContent(e) {
         imgContent[i].style.left = e.pageX + 'px';
         imgContent[i].style.top = e.pageY + 'px';
     }
-};
+}
 
 document.addEventListener('mousemove', showImgContent);
 
@@ -21,7 +21,6 @@ document.getElementById('filterInput').addEventListener('input', function() {
         let match = Array.from(cells).some(cell => cell.textContent.toLowerCase().includes(filterValue));
         row.style.display = match ? '' : 'none';
     });
-    
 });
 
 function sendEmail() {
@@ -58,6 +57,7 @@ function filterTable(filterValue) {
         }
     }
 }
+
 // Handle Smooth Scrolling After Page Load
 document.addEventListener("DOMContentLoaded", function() {
     const urlParams = new URLSearchParams(window.location.search);
@@ -65,11 +65,11 @@ document.addEventListener("DOMContentLoaded", function() {
     const tableSection = document.querySelector("#data-Table");
     
     if (filter && tableSection) {
-      setTimeout(() => {
-        tableSection.scrollIntoView({ behavior: "smooth" });
-      }, 500); // Delay to ensure loading is complete
+        setTimeout(() => {
+            tableSection.scrollIntoView({ behavior: "smooth" });
+        }, 500); // Delay to ensure loading is complete
     }
-  });
+});
 
 // On document ready, check if there's a filter in the URL
 document.addEventListener("DOMContentLoaded", function() {
@@ -77,6 +77,21 @@ document.addEventListener("DOMContentLoaded", function() {
     if (filter) {
         filterTable(filter); // Apply the filter to the table
     }
+});
+
+// Remove trailing hash (#) from the URL
+if (window.location.hash === "#") {
+    history.replaceState(null, null, window.location.pathname);
+}
+
+// Smooth scrolling for hash links
+document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+    anchor.addEventListener('click', function (e) {
+        e.preventDefault();
+        document.querySelector(this.getAttribute('href')).scrollIntoView({
+            behavior: 'smooth'
+        });
+    });
 });
 
 const apiKey = '1bde3e50da3850749823e055b9ed3482'; // Replace with your OpenWeatherMap API key
